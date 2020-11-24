@@ -15,11 +15,7 @@ void displayMe(void){
         glVertex2d(-900, -900);
     glEnd();
     glFlush();
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
 
-void displayMe(void){
 //awan1
     glMatrixMode(GL_MODELVIEW);
     glColor3ub(252, 252, 252);
