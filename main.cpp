@@ -150,6 +150,90 @@ void displayMe(void){
         glVertex2f(56, 22);
     glEnd();
     glFlush();
+	
+	//gedung
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0,0,0);
+    glBegin(GL_POLYGON);
+        glVertex2f(10, 5);
+        glVertex2f(10, 18);
+        glVertex2f(12, 18);
+        glVertex2f(12, 17);
+        glVertex2f(13, 17);
+        glVertex2f(12.99, 19.24);
+        glVertex2f(22, 19.24);
+        glVertex2f(22, 14);
+        glVertex2f(30, 14);
+        glVertex2f(29.97, 20.84);
+        glVertex2f(38.02, 20.95);
+        glVertex2f(38.02, 11.33);
+        glVertex2f(41.96, 11.3);
+        glVertex2f(42, 18);
+        glVertex2f(48, 18);
+        glVertex2f(47.99, 20.79);
+        glVertex2f(59.99, 20.74);
+        glVertex2f(60, 5);
+
+    glEnd();
+    glFlush();
+
+//jendela
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(237, 236, 173);
+    glBegin(GL_QUADS);
+        glVertex2f(32.95, 18.61);
+        glVertex2f(36, 18.61);
+        glVertex2f(36, 16);
+        glVertex2f(32.95, 16);
+
+    glEnd();
+    glFlush();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(237, 236, 173);
+    glBegin(GL_QUADS);
+        glVertex2f(45, 13.12);
+        glVertex2f(48, 13.12);
+        glVertex2f(48,10);
+        glVertex2f(45, 10);
+
+    glEnd();
+    glFlush();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(237, 236, 173);
+    glBegin(GL_QUADS);
+        glVertex2f(53.11, 18.77);
+        glVertex2f(56, 18.77);
+        glVertex2f(56, 15.67);
+        glVertex2f(53.11, 15.67);
+
+    glEnd();
+    glFlush();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(237, 236, 173);
+    glBegin(GL_QUADS);
+        glVertex2f(16, 18);
+        glVertex2f(18, 18);
+        glVertex2f(18, 16);
+        glVertex2f(16, 16);
+
+    glEnd();
+    glFlush();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(237, 236, 173);
+    glBegin(GL_QUADS);
+        glVertex2f(24, 13.15);
+        glVertex2f(26, 13.15);
+        glVertex2f(26, 11.23);
+        glVertex2f(24, 11.23);
+
+    glEnd();
+    glFlush();
 
 //jalan
     glMatrixMode(GL_MODELVIEW);
