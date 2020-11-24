@@ -349,7 +349,128 @@ void displayMe(void){
     glEnd();
 	glFlush();
 
+//Gambar tank enemy
+//atas
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(1,0,0);
+    glBegin(GL_POLYGON);
+        glVertex2f(51.71, 6.51);
+        glVertex2f(51.7, 7.04);
+        glVertex2f(51.37, 7.14);
+        glVertex2f(51.09, 10.73);
+        glVertex2f(50.92, 7.58);
+        glVertex2f(50.82, 7.92);
+        glVertex2f(50.89, 8.32);
+        glVertex2f(51.06, 8.61);
+        glVertex2f(51.35, 8.82);
+        glVertex2f(51.7, 8.9);
+        glVertex2f(52.05, 8.94);
+        glVertex2f(52.35, 8.91);
+        glVertex2f(52.63, 8.8);
+        glVertex2f(52.87, 8.62);
+        glVertex2f(53.02, 8.32);
+        glVertex2f(53.09, 8.01);
+        glVertex2f(53.05, 7.69);
+        glVertex2f(52.93, 7.4);
+        glVertex2f(52.7, 7.16);
+        glVertex2f(52.3, 7.02);
+        glVertex2f(52.3, 6.49);
+
+    glEnd();
+    glFlush();
+
+//atas2
+    glMatrixMode(GL_MODELVIEW);
+    glColor3b(1.0,0.0,0.0);
+    glBegin(GL_POLYGON);
+        glVertex2f(51, 6);
+        glVertex2f(51.51, 6.5);
+        glVertex2f(52.51, 6.49);
+        glVertex2f(53, 6);
+    glEnd();
+    glFlush();
+
+//body
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0.5,0,0);
+    glBegin(GL_POLYGON);
+        glVertex2f(48, 4);
+        glVertex2f(50, 6);
+        glVertex2f(54, 6);
+        glVertex2f(56, 4);
+
+	glEnd();
+	glFlush();
+
+//rodaBelakang
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0.0,0.0,0.0);
+    glBegin(GL_POLYGON);
+        glVertex2f(53.29, 3.53);
+        glVertex2f(53.01, 3.68);
+        glVertex2f(52.89, 3.83);
+        glVertex2f(52.79, 4.02);
+        glVertex2f(52.89, 4.27);
+        glVertex2f(53.04, 4.48);
+        glVertex2f(53.3, 4.61);
+        glVertex2f(53.6, 4.6);
+        glVertex2f(53.91, 4.51);
+        glVertex2f(54.07, 4.27);
+        glVertex2f(54.12, 4.01);
+        glVertex2f(54.09, 3.82);
+        glVertex2f(53.95, 3.63);
+        glVertex2f(53.66, 3.53);
+
+    glEnd();
+	glFlush();
+
+//rodaDepan
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0.0,0.0,0.0);
+    glBegin(GL_POLYGON);
+        glVertex2f(50.58, 3.56);
+        glVertex2f(50.35, 3.6);
+        glVertex2f(50.15, 3.71);
+        glVertex2f(49.97, 3.88);
+        glVertex2f(49.91, 4.15);
+        glVertex2f(50.01, 4.33);
+        glVertex2f(50.17, 4.51);
+        glVertex2f(50.4, 4.6);
+        glVertex2f(50.68, 4.61);
+        glVertex2f(50.89, 4.54);
+        glVertex2f(51.12, 4.37);
+        glVertex2f(51.2, 4.16);
+        glVertex2f(51.21, 3.96);
+        glVertex2f(51.13, 3.8);
+        glVertex2f(51.03, 3.67);
+        glVertex2f(50.84, 3.58);
+    glEnd();
+	glFlush();
+
+
+//belakang
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0,0,0.5);
+    glBegin(GL_POLYGON);
+        glVertex2f(54.8, 5.2);
+        glVertex2f(55.80, 6.10);
+        glVertex2f(55.88, 5.26);
+        glVertex2f(55.3, 4.7);
+    glEnd();
+	glFlush();
+
+//tembak
+    glMatrixMode(GL_MODELVIEW);
+    glColor3f(0,0,0.5);
+    glBegin(GL_POLYGON);
+        glVertex2f(48.8, 4.8);
+        glVertex2f(46.5, 4.8);
+        glVertex2f(45.5, 5.5);
+        glVertex2f(49.5, 5.5);
+    glEnd();
+	glFlush();
 }
+
 
 int main(int argc, char** argv){
 	glutInit(&argc, argv);
