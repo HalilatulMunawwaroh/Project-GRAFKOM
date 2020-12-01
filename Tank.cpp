@@ -27,7 +27,7 @@ void ColliderPersegi(){ // Collider bentuk kotak
 void TankView(){
     //atas
     glMatrixMode(GL_MODELVIEW);
-    glColor3f(1.0,0.0,1.0);
+    glColor3f(1,1,1);
     glBegin(GL_POLYGON);
         glVertex2f(16.71, 9);
         glVertex2f(16.67, 10.2);
