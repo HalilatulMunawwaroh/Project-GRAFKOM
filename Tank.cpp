@@ -8,8 +8,8 @@ float horizontalMove;
 float verticalMove;
 
 // Collider
-float posisiX[2] = {0, 15};
-float posisiY[2] = {0, 10};
+float posisiX[2] = {10, 30};
+float posisiY[2] = {-5, 5};
 
 
 void ColliderPersegi(){ // Collider bentuk kotak
@@ -143,7 +143,7 @@ void TankObject(){
 
     glPushMatrix();
     glTranslatef(horizontalMove, verticalMove,0); // Mengendalikan posisi tank
-    glTranslatef(-12,-3,0); // Menengahkan view
+    glTranslatef(0,-8,0); // Menengahkan view
     TankView(); // Memanggil view
     glPopMatrix();
 }
