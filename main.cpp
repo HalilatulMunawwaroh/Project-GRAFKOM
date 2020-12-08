@@ -1,6 +1,4 @@
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
+clude <GL/glut.h>
 
 float x_pos1 = 0.0;
 float x_pos2 = 0.0;
@@ -29,6 +27,86 @@ void baground(){
         glVertex2d(900, -900);
         glVertex2d(-900, -900);
     glEnd();
+}
+
+void gedung(){
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(0, 0, 0);
+    glBegin(GL_QUADS);
+        glVertex2d(10, 5);
+        glVertex2d(10, 20);
+        glVertex2d(20, 20);
+        glVertex2d(20, 5);
+    glEnd();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(0, 0, 0);
+    glBegin(GL_QUADS);
+        glVertex2d(30, 5);
+        glVertex2d(30, 15);
+        glVertex2d(40, 15);
+        glVertex2d(40, 5);
+    glEnd();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(0, 0, 0);
+    glBegin(GL_QUADS);
+        glVertex2d(50, 5);
+        glVertex2d(50, 20);
+        glVertex2d(60, 20);
+        glVertex2d(60, 5);
+    glEnd();
+
+//jendela
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(232, 231, 160);
+    glBegin(GL_QUADS);
+        glVertex2d(12.11, 10);
+        glVertex2d(12.11, 15.27);
+        glVertex2d(17.5, 15.27);
+        glVertex2d(17.5, 10);
+    glEnd();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(232, 231, 160);
+    glBegin(GL_QUADS);
+        glVertex2d(32.25, 7.85);
+        glVertex2d(32.25, 12);
+        glVertex2d(37.5, 12);
+        glVertex2d(37.5, 7.85);
+    glEnd();
+
+    glMatrixMode(GL_MODELVIEW);
+    glColor3ub(232, 231, 160);
+    glBegin(GL_QUADS);
+        glVertex2d(52.11, 10);
+        glVertex2d(52.11, 15.27);
+        glVertex2d(57.8, 15.27);
+        glVertex2d(57.8, 10);
+    glEnd();
+}
+
+void displayMe(void) {
+	glClear(GL_COLOR_BUFFER_BIT);
+	baground();
+    gedung();
+
+	glFlush();
+	glutSwapBuffers();
+}
+
+int main(int argc, char** argv)
+{
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+	glutInitWindowSize(900, 900);
+	glutInitWindowPosition(0, 0);
+	glutCreateWindow("Windows");
+	gluOrtho2D(10, 60, -5, 45);
+	glutDisplayFunc(displayMe);
+
+	glutMainLoop();
+	return 0;
 }
 
 void awan(){
