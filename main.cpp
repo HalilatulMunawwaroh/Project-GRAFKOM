@@ -1,4 +1,6 @@
-clude <GL/glut.h>
+#include <windows.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 float x_pos1 = 0.0;
 float x_pos2 = 0.0;
@@ -475,7 +477,7 @@ void timer(int){
         glVertex2f(15.09, 4.82);
 
     glEnd();
-	glFlush();
+    glFlush();
 
 //rodaDepan
     glMatrixMode(GL_MODELVIEW);
@@ -499,7 +501,7 @@ void timer(int){
         glVertex2f(19.43, 4.8);
         glVertex2f(19.06, 4.84);
     glEnd();
-	glFlush();
+    glFlush();
 
 
 //belakang
@@ -511,7 +513,7 @@ void timer(int){
         glVertex2f(11.64, 5.47);
         glVertex2f(12.72, 5.18);
     glEnd();
-	glFlush();
+    glFlush();
 
 //tembak
     glMatrixMode(GL_MODELVIEW);
@@ -522,7 +524,7 @@ void timer(int){
         glVertex2f(25, 5.3);
         glVertex2f(21.16, 5.33);
     glEnd();
-	glFlush();
+    glFlush();
 
 //peluru
     glMatrixMode(GL_MODELVIEW);
@@ -532,7 +534,7 @@ void timer(int){
         glVertex2f(25.55, 5.42);
         glVertex2f(26.53, 5.61);
     glEnd();
-	glFlush();
+    glFlush();
 
 //Gambar tank enemy
 //atas
@@ -584,8 +586,8 @@ void timer(int){
         glVertex2f(54, 6);
         glVertex2f(56, 4);
 
-	glEnd();
-	glFlush();
+    glEnd();
+    glFlush();
 
 //rodaBelakang
     glMatrixMode(GL_MODELVIEW);
@@ -607,7 +609,7 @@ void timer(int){
         glVertex2f(53.66, 3.53);
 
     glEnd();
-	glFlush();
+    glFlush();
 
 //rodaDepan
     glMatrixMode(GL_MODELVIEW);
@@ -642,7 +644,7 @@ void timer(int){
         glVertex2f(55.88, 5.26);
         glVertex2f(55.3, 4.7);
     glEnd();
-	glFlush();
+    glFlush();
 
 //tembak
     glMatrixMode(GL_MODELVIEW);
@@ -653,31 +655,31 @@ void timer(int){
         glVertex2f(45.5, 5.5);
         glVertex2f(49.5, 5.5);
     glEnd();
-	glFlush();
+    glFlush();
 }
 
 void displayMe(void) {
-	glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT);
     baground();
     awan();
     jalan();
     gedung();
 
-	glFlush();
-	glutSwapBuffers();
+    glFlush();
+    glutSwapBuffers();
 }
 
 int main(int argc, char** argv)
 {
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowSize(900, 900);
-	glutInitWindowPosition(0, 0);
-	glutCreateWindow("Windows");
-	gluOrtho2D(10, 60, -5, 45);
-	glutDisplayFunc(displayMe);
-	glutTimerFunc(0, timer, 0);
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
+    glutInitWindowSize(900, 900);
+    glutInitWindowPosition(0, 0);
+    glutCreateWindow("Windows");
+    gluOrtho2D(10, 60, -5, 45);
+    glutDisplayFunc(displayMe);
+    glutTimerFunc(0, timer, 0);
 
-	glutMainLoop();
-	return 0;
+    glutMainLoop();
+    return 0;
 }
