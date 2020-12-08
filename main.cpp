@@ -84,30 +84,6 @@ void gedung(){
         glVertex2d(57.8, 15.27);
         glVertex2d(57.8, 10);
     glEnd();
-}
-
-void displayMe(void) {
-	glClear(GL_COLOR_BUFFER_BIT);
-	baground();
-    gedung();
-
-	glFlush();
-	glutSwapBuffers();
-}
-
-int main(int argc, char** argv)
-{
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowSize(900, 900);
-	glutInitWindowPosition(0, 0);
-	glutCreateWindow("Windows");
-	gluOrtho2D(10, 60, -5, 45);
-	glutDisplayFunc(displayMe);
-
-	glutMainLoop();
-	return 0;
-}
 
 void awan(){
 //awan1
@@ -685,6 +661,7 @@ void displayMe(void) {
     baground();
     awan();
     jalan();
+    gedung();
 
 	glFlush();
 	glutSwapBuffers();
