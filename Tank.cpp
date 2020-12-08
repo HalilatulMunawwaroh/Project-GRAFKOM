@@ -8,13 +8,16 @@ float horizontalMove;
 float verticalMove;
 
 // Collider
-float posisiX[2] = {10, 30};
-float posisiY[2] = {-5, 5};
+float posisiX[2] = {10, 17};
+float posisiY[2] = {-5, 0};
 
 
-void ColliderPersegi(){ // Collider bentuk kotak
+void ColliderTank(){ // Collider bentuk kotak
     glPushMatrix();
-    glBegin(GL_LINES);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable( GL_BLEND );
+    glColor4f(0,0,0,0);
+    glBegin(GL_POLYGON);
         glVertex2f(posisiX[0], posisiY[0]);
         glVertex2f(posisiX[1], posisiY[0]);
         glVertex2f(posisiX[1], posisiY[1]);
@@ -139,11 +142,13 @@ void TankView(){
 
 void TankObject(){
     // Memasang collider pada object
-    ColliderPersegi();
+    ColliderTank();
 
     glPushMatrix();
     glTranslatef(horizontalMove, verticalMove,0); // Mengendalikan posisi tank
-    glTranslatef(0,-8,0); // Menengahkan view
+    glTranslatef(3,-8,0); // Menengahkan view
+    glScalef(0.5, 0.5, 0);
+    glTranslatef(3, 3, 0);
     TankView(); // Memanggil view
     glPopMatrix();
 }
@@ -169,7 +174,7 @@ void characterController(int data)
 
     // Jika menekan tombol panah atas
     if(GetAsyncKeyState(VK_UP)){
-        if (posisiY[1] <= 15){
+        if (posisiY[1] <= 9){
             posisiY[0] += 0.1f;
             posisiY[1] += 0.1f;
             verticalMove+=0.1f;
@@ -190,8 +195,8 @@ void characterController(int data)
 void displayMe(void) {
 	glClear(GL_COLOR_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
-    glColor3ub(52, 225,235);
-    glBegin(GL_QUADS);
+        glColor3ub(52, 225,235);
+        glBegin(GL_QUADS);
         glVertex2d(-900, 900);
         glVertex2d(900, 900);
         glVertex2d(900, -900);
