@@ -61,7 +61,6 @@ void EnemyView(){
         glVertex2f(52.3 , 6.49);
 
     glEnd();
-    glFlush();
 
 //atas2
     glMatrixMode(GL_MODELVIEW);
@@ -72,7 +71,6 @@ void EnemyView(){
         glVertex2f(52.51 , 6.49);
         glVertex2f(53, 6);
     glEnd();
-    glFlush();
 
 //body
     glMatrixMode(GL_MODELVIEW);
@@ -84,7 +82,6 @@ void EnemyView(){
         glVertex2f(56 , 4);
 
 	glEnd();
-	glFlush();
 
 //rodaBelakang
     glMatrixMode(GL_MODELVIEW);
@@ -106,7 +103,6 @@ void EnemyView(){
         glVertex2f(53.66, 3.53);
 
     glEnd();
-	glFlush();
 
 //rodaDepan
     glMatrixMode(GL_MODELVIEW);
@@ -129,7 +125,6 @@ void EnemyView(){
         glVertex2f(51.03, 3.67);
         glVertex2f(50.84, 3.58);
     glEnd();
-	glFlush();
 
 
 //belakang
@@ -141,7 +136,6 @@ void EnemyView(){
         glVertex2f(55.88, 5.26);
         glVertex2f(55.3, 4.7);
     glEnd();
-	glFlush();
 
 //tembak
     glMatrixMode(GL_MODELVIEW);
@@ -153,7 +147,6 @@ void EnemyView(){
         glVertex2f(49.5, 5.5);
     //glPopMatrix();
     glEnd();
-	glFlush();
 }
 
 void EnemyObject(float y_pos){
