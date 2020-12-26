@@ -644,7 +644,7 @@ float posisi1Y[2] = {2, 13};
 void ColliderPersegi(float y){ // Collider bentuk kotak
     glPushMatrix();
     glBegin(GL_POLYGON);
-	glColor4f(0,0,0,1);
+	glColor4f(0,0,0,0);
 	glVertex2f(posisi1X[0], posisi1Y[0]+y);
 	glVertex2f(posisi1X[1], posisi1Y[0]+y);
 	glVertex2f(posisi1X[1], posisi1Y[1]+y);
